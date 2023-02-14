@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+}
+.logo{
+    width: 280px;
+    height:200px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-link{
+    margin-left: 15px;
+    color: rgb(200, 29, 69);
+}
+
+.carousel, .carousel-inner {
+    height: 300px;
+    object-fit: contain;
+  }
+
+  .form-checkbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+.card{
+    width: 300px;
+    text-align: center;
+}
+
+.card>img{
+    height: 180px;
+}
+
+footer>div>img{
+    width: 30px;
+    height: 30px;
+
+
+}
+
+
+.item-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+h1{
+    text-align: center;
+    color: antiquewhite;
+}
+
+.form-contact{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    color: white;
+    border: 1px solid whitesmoke;
+}
+
+.card-upcomingEvents{
+    background-color: pink;
+}
+
+.card-pastEvents{
+    background-color: cornflowerblue;
+}
+
+.details{
+    display: flex;
+    flex-direction: row;
+    background-color: grey;
+    color: white;
+    border: 1px white solid;
+    width: 1000px;
+
+}
+
+.details>img{
+    width: 300px;
+    height: 300px;
+}
+
+.main-details{
+    height: 450px;
+}
+
+table, tr, td{
+    color: wheat;
+    border: 1px solid white;
+}
+
+table{
+    margin: 20px;
+}
+
+.section-stats{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    flex-direction: column;
+}
