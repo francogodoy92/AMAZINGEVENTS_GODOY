@@ -181,10 +181,11 @@ textarea,
 input[type="email"]:hover{
     transform: scale(1);
 } 
-button:hover{
+.btn:hover{
   transform: scale(1.2);
+  background-color: #2f414F;
 }
-button{
+.btn{
   border-radius: 0.5rem;
   padding: 0.5rem;
   background-color: #2f414f;
@@ -196,7 +197,7 @@ button{
   color: #c7dad4;
   border: none;
 }
-button a{
+.btn a{
   text-decoration: none;
   color: #c7dad4;
 }
