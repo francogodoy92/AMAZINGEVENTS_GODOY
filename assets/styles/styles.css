@@ -181,3 +181,22 @@ textarea,
 input[type="email"]:hover{
     transform: scale(1);
 } 
+button:hover{
+  transform: scale(1.2);
+}
+button{
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: #2f414f;
+  color: #c7dad4;
+}
+.nav-link[href="#"]{
+  background-color: #3894a3;
+  box-shadow: #c7dad4;
+  color: #c7dad4;
+  border: none;
+}
+button a{
+  text-decoration: none;
+  color: #c7dad4;
+}
