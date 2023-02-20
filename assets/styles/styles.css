@@ -243,4 +243,20 @@ input[type="email"]:hover{
   height: auto;
   padding: 0.25rem;
 }
+.section-stats{
+  width: auto;
+  font-size: 1rem;
+}
+th{
+  font-weight: normal;
+  color: #2f414F;
+  padding: 0.4rem;
+}
+table{
+  width: 100%;
+  margin: 0;
+}
+.section-stats>h2{
+  margin-top: 0.5rem;
+}
 }
