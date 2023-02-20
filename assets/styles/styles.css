@@ -45,6 +45,7 @@ header {
 }
 .nav-link {
   margin-left: 15px;
+  margin-right: 10px;
   color: #2f414f;
   border: 2px solid #c7dad4;
   padding: 0.2rem;
@@ -55,7 +56,7 @@ header {
 .carousel,
 .carousel-inner {
   object-fit: contain;
-  height: 20rem;
+  height: 15rem;
   margin-bottom: 5rem;
   border-radius: 0.5rem;
 }
@@ -105,7 +106,7 @@ h1 {
 
 .form-contact {
   border-radius: 0.5rem;
-  width: 40%;
+  width: 60%;
   color: #f1f1ef;
   border: 2px solid #f1f1ef;
 }
@@ -150,6 +151,9 @@ table {
 }
 .section-stats {
   justify-content: center;
+}
+textarea{
+  border-radius: 0.5rem;
 }
 
 .nav-link:hover{
@@ -201,4 +205,18 @@ input[type="email"]:hover{
 .btn a{
   text-decoration: none;
   color: #c7dad4;
+}
+@media screen and (max-width:375px){
+.carousel-inner {
+  height: 2rem;
+  margin-bottom: 0;
+  }
+.carousel{
+  height: 1rem;
+  margin-bottom: 0;
+}
+.banner{
+  height: 10rem;
+  margin: 0;
+}
 }
