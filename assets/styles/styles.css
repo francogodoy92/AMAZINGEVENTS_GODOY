@@ -220,6 +220,9 @@ input[type="email"]:hover{
   height: 15rem;
   margin: 0;
 }
+.details>img{
+  width: auto;
+}
 
 .details {
   display: flex;
