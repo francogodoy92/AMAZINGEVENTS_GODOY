@@ -4,7 +4,10 @@ const cards = document.createDocumentFragment();
 
 let container = document.getElementById("container-cards");
 
-function imprimirCard(array, contenedor) {
+
+let upcomingEvents = events.filter((events) => events.date > data.currentDate);
+
+  function imprimirCard(array, contenedor) {
     for (let event of array) {
         let div = document.createElement("div");
         div.className = "card col-md-3 m-3"
@@ -22,6 +25,4 @@ function imprimirCard(array, contenedor) {
     contenedor.appendChild(cards)
 }
 
-imprimirCard(events, container);
-
-
+imprimirCard(upcomingEvents, container);
