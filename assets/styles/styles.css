@@ -197,7 +197,9 @@ input[type="email"]:hover{
 } 
 .btn:hover{
   transform: scale(1.2);
-  background-color: #2f414F;
+  background-color: #c7dad4;
+  color: #2f414F;
+  box-shadow: 2px 2px 4px #2f414f;
 }
 .btn{
   border-radius: 0.5rem;
