@@ -10,7 +10,7 @@ function imprimirCard(array, contenedor) {
         div.className = "card col-md-3 m-3"
         div.innerHTML += `
         <img src="${event.image}" alt="Event Image">
-        <h2>${event.name}</h2>   
+        <h3>${event.name}</h3>   
         <p>${event.category}</p>
         <div class="item-card">
             <p>$${event.price}</p>
