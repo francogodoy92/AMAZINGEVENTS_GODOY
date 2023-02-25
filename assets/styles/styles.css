@@ -180,6 +180,7 @@ textarea{
     border: none;
     transform: scale(1.3);
     z-index: 2;
+    transition: 0.5s;
 }
 .card input{
     background-color: #2f414F;
@@ -188,6 +189,7 @@ textarea{
 
 input:hover{
     transform: scale(1.2);
+    transition: 0.3s;
 }
 
 input[type="text"],
@@ -200,6 +202,7 @@ input[type="email"]:hover{
   background-color: #c7dad4;
   color: #2f414F;
   box-shadow: 2px 2px 4px #2f414f;
+  transition: 0.2s;
 }
 .btn{
   border-radius: 0.5rem;
@@ -222,6 +225,28 @@ input[type="email"]:hover{
   background-color: #c7dad4;
 }
 
+
+#flechaDer{
+  width: 100%;
+}
+
+#flechaBtn{
+  width: 3%;
+  height: 3rem;
+  background-color: #3894a3;
+  border-radius: 0.5rem;
+}
+
+#flechaBtn:hover{
+  transform: scale(1.2);
+  transition: 0.5s;
+  background-color: #c7dad4;
+}
+
+#flechaIzq{
+  width: 100%;
+  rotate: 180deg;
+}
 
 @media screen and (max-width:376px){
 
