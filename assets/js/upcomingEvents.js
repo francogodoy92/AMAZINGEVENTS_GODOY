@@ -7,7 +7,7 @@ let container = document.getElementById("container-cards");
 
 let upcomingEvents = events.filter((events) => events.date > data.currentDate);
 
-  function imprimirCard(array, contenedor) {
+function imprimirCard(array, contenedor) {
     for (let event of array) {
         let div = document.createElement("div");
         div.className = "card col-md-3 m-3"
