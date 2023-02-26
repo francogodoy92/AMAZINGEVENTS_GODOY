@@ -232,9 +232,10 @@ input[type="email"]:hover{
 
 #flechaBtn{
   width: 3%;
-  height: 3rem;
+  height: auto;
   background-color: #3894a3;
   border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 
 #flechaBtn:hover{
@@ -298,4 +299,13 @@ table{
 .form-checkbox{
   margin-top: 0rem;
 }
+
+}
+
+@media screen and (max-width:769px){
+  #flechaBtn{
+    width: 12%;
+    height: auto;
+    padding: 0.5rem;
+  }
 }
