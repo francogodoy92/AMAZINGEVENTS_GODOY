@@ -230,15 +230,20 @@ input[type="email"]:hover{
   width: 100%;
 }
 
-#flechaBtn{
+.flechaBtn{
   width: 3%;
   height: auto;
   background-color: #3894a3;
   border-radius: 0.5rem;
   padding: 0.5rem;
+  z-index: 2;
 }
 
-#flechaBtn:hover{
+.container-flechas{
+  padding: 0.5rem;
+}
+
+.flechaBtn:hover{
   transform: scale(1.2);
   transition: 0.5s;
   background-color: #c7dad4;
@@ -303,7 +308,7 @@ table{
 }
 
 @media screen and (max-width:769px){
-  #flechaBtn{
+  .flechaBtn{
     width: 12%;
     height: auto;
     padding: 0.5rem;
