@@ -5,10 +5,10 @@ const cards = document.createDocumentFragment();
 let container = document.getElementById("container-cards");
 
 function imprimirCard(array, contenedor) {
-    for (let event of array) {
-        let div = document.createElement("div");
-        div.className = "card col-md-3 m-3"
-        div.innerHTML += `
+  for (let event of array) {
+    let div = document.createElement("div");
+    div.className = "card col-md-3 m-3";
+    div.innerHTML += `
         <img src="${event.image}" alt="Event Image">
         <h3>${event.name}</h3>   
         <p>${event.category}</p>
@@ -16,12 +16,33 @@ function imprimirCard(array, contenedor) {
             <p>$${event.price}</p>
             <a class="btn" href="./pages/details.html">View More</a>
         </div>
-        `
-        cards.appendChild(div)
-    }
-    contenedor.appendChild(cards)
+        `;
+    cards.appendChild(div);
+  }
+  contenedor.appendChild(cards);
 }
 
-imprimirCard(events, container);
+imprimirCard(events, container)
+
+let categoryContainer = document.getElementById("checkbox");
+let categoryContainerPadre = document.getElementById("form-father");
+let categorias = Array.from(
+  new Set(events.map(elemento => elemento.category))
+);
+
+const check = document.createDocumentFragment();
+
+function renderCheckboxs(category) {
+  let checkboxs = document.createElement("fieldset");
+  category.forEach(element => {
+    checkboxs.innerHTML += `<label class="text-white m-2" for="${element}">${element}</label>
+    <input type="checkbox" name="category" value="${element}" id="${element}">`;
+    check.appendChild(checkboxs);
+});
+categoryContainer.appendChild(check);
+}
+renderCheckboxs(categorias);
+
+
 
 
