@@ -46,26 +46,18 @@
 					</div>
 				</div>
 			</nav>
-			<!-- <nav class="navbar">
-        <a class="nav-link" href="#">Home</a>
-        <a class="nav-link" href="./pages/upcomingEvents.html">Upcoming Events</a>
-        <a class="nav-link" href="./pages/pastEvents.html">Past Events</a>
-        <a class="nav-link" href="./pages/contact.html">Contact</a>
-        <a class="nav-link" href="./pages/stats.html">Stats</a>
-      </nav> -->
 		</header>
 		<main class="d-flex flex-column">
-			<section
-				id="carouselExampleSlidesOnly"
+			<div class="d-flex justify-content-between align-items-center container-flechas">
+				<a href="./pages/stats.html" class="flechaBtn"><img
+						src="./assets/img/arrow.png" id="flechaIzq" alt="indicador"></a>
+				<h1>Home</h1>
+				<a href="./pages/upcomingEvents.html" class="flechaBtn"><img
+						src="./assets/img/arrow.png" id="flechaDer" alt="indicador"></a>
+			</div>
+			<section id="carouselExampleSlidesOnly"
 				class="carousel slide banner"
 				data-bs-ride="carousel">
-				<div class="d-flex justify-content-between align-items-center container-flechas">
-					<a href="./pages/stats.html" class="flechaBtn"><img
-							src="./assets/img/arrow.png" id="flechaIzq" alt="indicador"></a>
-					<h1>Home</h1>
-					<a href="./pages/upcomingEvents.html" class="flechaBtn"><img
-							src="./assets/img/arrow.png" id="flechaDer" alt="indicador"></a>
-				</div>
 				<div class="carousel-inner">
 
 					<div class="carousel-item active">
@@ -83,10 +75,11 @@
 				</div>
 			</section>
 			<section class="form container-fluid" id="form-father">
-				<form class="form-checkbox" action="#" id="checkbox">
+				<form class="form-checkbox" >
+					<fieldset id="checkbox"></fieldset>
 				</form>
-				<form action="#" id="search">
-					<fieldset action="#">
+				<form id="search">
+					<fieldset>
 						<input type="text" id="input-text">
 						<input type="submit" id="submit" value="Search">
 					</fieldset>

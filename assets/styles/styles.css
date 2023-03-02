@@ -70,7 +70,6 @@ header {
 
 .form-checkbox {
   display: flex;
-  margin-top: 3rem;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -115,7 +114,6 @@ h1 {
 .form-contact {
   border-radius: 0.5rem;
   width: 60%;
-  margin-top: 5rem;
   color: #f1f1ef;
   border: 2px solid #f1f1ef;
 }
@@ -160,7 +158,6 @@ table {
 }
 .section-stats {
   justify-content: center;
-  margin-top: 3rem;
 }
 textarea{
   border-radius: 0.5rem;
@@ -267,11 +264,6 @@ input[type="email"]:hover{
   width: auto;
 }
 
-.carousel,
-.carousel-inner {
-  margin-bottom: 1rem;
-
-}
 .details {
   display: flex;
   flex-direction: column;
@@ -282,11 +274,9 @@ input[type="email"]:hover{
 #searchText{
   width: 95%;
   height: 2rem;
-  margin-top: 1rem;
 }
 .form-contact{
   width: 80%;
-  margin-top: 1rem;
 }
 #search{
   height: auto;
@@ -295,7 +285,6 @@ input[type="email"]:hover{
 .section-stats{
   width: auto;
   font-size: 1rem;
-  margin-top: 1rem;
 }
 th{
   font-weight: normal;
@@ -306,9 +295,7 @@ table{
   width: 100%;
   margin: 0;
 }
-.section-stats>h2{
-  margin-top: 0.5rem;
-}
+
 .form-checkbox{
   margin-top: 0rem;
 }

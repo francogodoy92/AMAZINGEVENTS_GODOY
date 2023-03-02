@@ -1,8 +1,105 @@
-const events = data.events;
+let events = data.events
+
+ console.log(events)
+
+ let div = document.getElementById("container-cards")
+div.innerHTML = ``
+
+ function renderCards (datos, contenedor){
+   contenedor.innerHTML = ""
+   let eventosString = ""
+   datos.forEach((event) => {
+     eventosString += `<div class="card col-md-3 m-3">
+     <img src="${event.image}" alt="Event Image">
+        <h3>${event.name}</h3>   
+        <p>${event.category}</p>
+        <div class="item-card">
+            <p>$${event.price}</p>
+            <a class="btn" href="./pages/details.html">View More</a>
+        </div>
+     </div>`
+     })
+     contenedor.innerHTML = eventosString
+ }
+
+ renderCards(events, div)
+
+
+
+ let categoryConteiner = document.getElementById("checkbox")
+ let categoryConteinerPadre = document.getElementById("form-father")
+
+ let categorias = (Array.from (new Set(events.map(elemento => elemento.category))))
+
+ console.log(categorias)
+
+ function renderCheckboxs(category, conteiner){
+   let checkboxs = ""
+   category.forEach(element => {
+   checkboxs += `<label class="text-white m-2" for="${element}">${element}</label>
+   <input type="checkbox" name="category" value="${element}" id="${element}">`
+ })
+ conteiner.innerHTML += checkboxs
+ }
+  
+ renderCheckboxs(categorias, categoryConteiner)
+
+
+ categoryConteinerPadre.addEventListener("change", (element) => {
+   let filtradoPorCategoria = filtrar()
+   console.log(filtradoPorCategoria)
+   renderCards(filtradoPorCategoria, div)
+ } )
+
+
+ function filtrarPorCategoria(eventos, category){
+   let checked = (Array.from(document.querySelectorAll("input[type ='checkbox']:checked"))
+   .map((element) => element.value));
+   let arrayFiltrado = checked
+     .map((value) =>
+       eventos.filter((elemento) => {
+         return elemento.category === value;
+       })
+     ).flat();
+     if (checked.length == false ) {
+       return events;
+     } else {
+       return arrayFiltrado;
+     }
+    }
+
+    let input = document.getElementById("input-text")
+
+    input.addEventListener("input", () => {
+      let filtradoPorBusqueda = filtrar()
+      renderCards(filtradoPorBusqueda, div)
+    })
+
+    function filtrarPorBusqueda(eventos, valueSearch){
+      return eventos.filter(evento => (evento.name).toLowerCase().includes(valueSearch.toLowerCase()))
+    }
+
+    function filtrar(){
+      let filtradoPorCategoria = filtrarPorCategoria(events, categorias)
+      let filtradoPorBusqueda = filtrarPorBusqueda (filtradoPorCategoria, input.value)
+      return filtradoPorBusqueda 
+    }
+
+
+
+
+
+
+
+
+
+/* const events = data.events;
 
 const cards = document.createDocumentFragment();
 
 let container = document.getElementById("container-cards");
+
+
 
 function imprimirCard(array, contenedor) {
   for (let event of array) {
@@ -18,7 +115,7 @@ function imprimirCard(array, contenedor) {
             <a class="btn" href="./pages/details.html">View More</a>
         </div>
         `;
-    cards.appendChild(div);
+        cards.appendChild(div);
   }
   contenedor.appendChild(cards);
 }
@@ -28,29 +125,32 @@ imprimirCard(events, container);
 let categoryContainer = document.getElementById("checkbox");
 let categoryContainerPadre = document.getElementById("form-father");
 let categorias = Array.from(
-  new Set(events.map((elemento) => elemento.category))
+  new Set(events.map(elemento => elemento.category))
 );
 
-const check = document.createDocumentFragment();
-
-function renderCheckboxs(category) {
-  let checkboxs = document.createElement("fieldset");
-  category.forEach((element) => {
-    checkboxs.innerHTML += `<label class="text-white m-2" for="${element}">${element}</label>
-    <input type="checkbox" name="category" value="${element}" id="${element}">`;
-    check.appendChild(checkboxs);
+function renderCheckboxs(category, conteiner) {
+  let checkboxs = "";
+  category.forEach(element => {
+    checkboxs += `<div class="d-inline-block" id="divcheck"><label class="text-white m-2" for="${element}">${element}</label>
+    <input type="checkbox" name="category" value="${element}"  id="${element}"></div>`;
   });
-  categoryContainer.appendChild(check);
+  conteiner.innerHTML += checkboxs;
 }
-renderCheckboxs(categorias);
+renderCheckboxs(categorias, categoryContainer);
 
-/* function filtrarPorCategoria(eventos){
-  let checked = (Array.from(document.querySelectorAll("input[type ='checkbox']:checked")).map(element => element.value));
-  let arrayFiltrado = checked.map(value => eventos.filter(elemento => {elemento.category === value})).flat();
-  if (checked.length == false) {
-    return events;
-  } else {
-    return arrayFiltrado;
+function filtrarPorCategoria(eventos){
+  let checked = (Array.from(document.querySelectorAll("input[type ='checkbox']:checked"))
+  .map((element) => element.value));
+  let arrayFiltrado = checked
+    .map((value) =>
+      eventos.filter((elemento) => {
+        return elemento.category === value;
+      })
+    ).flat();
+    if (checked.length == false ) {
+      return events;
+    } else {
+      return arrayFiltrado;
+    }
   }
-}
- */
+filtrarPorCategoria(events) */
