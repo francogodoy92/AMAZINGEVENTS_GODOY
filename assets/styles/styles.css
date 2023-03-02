@@ -20,14 +20,13 @@ body {
 }
 main{
     padding: 1rem;
+    min-height: 85vh;
 }
 input {
   border-radius: 0.5rem;
   padding: 0.5rem;
   background-color: #3894a3;
   color: #c7dad4;
-  text-shadow: 1px 1px #2f414f;
-
 }
 input[type="text"],
 textarea,
