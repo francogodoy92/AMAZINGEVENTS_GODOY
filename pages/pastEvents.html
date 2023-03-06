@@ -79,22 +79,14 @@
 
 
 
-			<section class="form">
-				<form class="form-checkbox" action="#">
+			<section class="form container-fluid d-flex justify-content-between" id="form-father">
+				<form class="form-checkbox" >
+					<fieldset id="checkbox"></fieldset>
+				</form>
+				<form id="search">
 					<fieldset>
-						<label class=" m-2" for="category1">Category</label>
-						<input type="checkbox" name="category" id="category1">
-						<label class=" m-2" for="category2">Category</label>
-						<input type="checkbox" name="category" id="category2">
-						<label class=" m-2" for="category3">Category</label>
-						<input type="checkbox" name="category" id="category3">
-						<label class=" m-2" for="category4">Category</label>
-						<input type="checkbox" name="category" id="category4">
-						<label class=" m-2" for="category5">Category</label>
-						<input type="checkbox" name="category" id="category5">
-					</fieldset>
-					<fieldset><input type="text" id="searchText">
-						<input type="submit" id="search" value="Search">
+						<input type="text" id="input-text" placeholder="Search your event">
+						<!-- <input type="submit" id="submit" value="Search"> -->
 					</fieldset>
 				</form>
 			</section>

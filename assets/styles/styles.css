@@ -11,6 +11,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   background: #2f414f;
   color: #c7dad4;
@@ -123,12 +124,9 @@ h1 {
 }
 
 .detailsprice{
-  text-align: center;
+  text-align: left;
   font-size: 1.5rem;
-  font-weight: bold;
-  border-radius: 0.4rem;
-  border: 0.2rem solid #3894a3;
-  width: 10%;
+  font-weight: bold; 
 }
 
 .detailstext{
@@ -273,19 +271,18 @@ input[type="email"]:hover{
 }
 
 @media screen and (max-width:376px){
-
 .banner{
   height: 15rem;
   margin: 0;
 }
 .details>img{
-  width: auto;
+  width: 95%;
 }
 
 .details {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   padding: 0.5rem;
 }
 
