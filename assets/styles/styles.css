@@ -35,11 +35,13 @@ input[type="email"] {
   background-color: #c7dad4;
   color: #2f414f;
 }
+
 header {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
 .navbar-toggler{
   background-color: #c7dad4;
 }
@@ -213,6 +215,12 @@ textarea,
 input[type="email"]:hover{
     transform: scale(1);
 } 
+
+.submitContact:hover{
+  transform: scale(1);
+  box-shadow: 1px 1px 2px #c7dad4;
+}
+
 .btn:hover{
   transform: scale(1.2);
   background-color: #c7dad4;
