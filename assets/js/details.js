@@ -13,10 +13,10 @@ const details = document.getElementById("details-conteiner")
 
 details.innerHTML = `<img src="${eventsId.image}" alt="${eventsId.name}">
 <div>
-    <h2>${eventsId.name}</h2>
-    <p>${eventsId.description}</p>
-    <p>${eventsId.place}</p>
-    <p>${eventsId.date}</p>
-    <p>$${eventsId.price}</p>
+    <h2 class="detailstitle">${eventsId.name}</h2>
+    <p class="detailstext">${eventsId.description}</p>
+    <p class="detailstext">${eventsId.place}</p>
+    <p class="detailstext">${eventsId.date}</p>
+    <p class="detailsprice">$${eventsId.price}</p>
 </div>
 `
