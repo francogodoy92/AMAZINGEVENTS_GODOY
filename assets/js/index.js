@@ -1,3 +1,5 @@
+import data from "./amazing.js";
+
 let events = data.events;
 
 console.log(events);
@@ -15,7 +17,7 @@ function renderCards(datos, contenedor) {
         <p>${event.category}</p>
         <div class="item-card">
             <p>$${event.price}</p>
-            <a class="btn" href="./pages/details.html">View More</a>
+            <a class="btn" href="/pages/details.html?id=${event._id}" >View More</a>
         </div>
     </div>`;
   });
@@ -50,7 +52,7 @@ categoryConteinerPadre.addEventListener("change", (element) => {
   renderCards(filtradoPorCategoria, div);
 });
 
-function filtrarPorCategoria(eventos, category) {
+function filtrarPorCategoria(eventos) {
   let checked = Array.from(
     document.querySelectorAll("input[type ='checkbox']:checked")
   ).map((element) => element.value);
@@ -89,3 +91,4 @@ function filtrar() {
   );
   return filtradoPorBusqueda;
 }
+
