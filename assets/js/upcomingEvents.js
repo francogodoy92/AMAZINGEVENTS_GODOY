@@ -32,7 +32,7 @@ let categoryConteiner = document.getElementById("checkbox");
 let categoryConteinerPadre = document.getElementById("form-father");
 
 let categorias = Array.from(
-  new Set(events.map(elemento => elemento.category))
+  new Set(events.map((elemento) => elemento.category))
 );
 
 console.log(categorias);
@@ -93,4 +93,3 @@ function filtrar() {
   );
   return filtradoPorBusqueda;
 }
-

@@ -6,10 +6,9 @@ const queryString = location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const eventsId = events.find(element => element._id == id)
+const eventsId = events.find((element) => element._id == id);
 
-
-const details = document.getElementById("details-conteiner")
+const details = document.getElementById("details-conteiner");
 
 details.innerHTML = `<img src="${eventsId.image}" alt="${eventsId.name}">
 <div>
@@ -19,4 +18,4 @@ details.innerHTML = `<img src="${eventsId.image}" alt="${eventsId.name}">
     <p class="detailstext">${eventsId.date}</p>
     <p class="detailsprice">$${eventsId.price}</p>
 </div>
-`
+`;
