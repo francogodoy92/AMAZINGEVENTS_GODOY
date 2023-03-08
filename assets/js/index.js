@@ -73,8 +73,17 @@ function filtrarPorCategoria(eventos) {
 let input = document.getElementById("input-text");
 
 input.addEventListener("input", () => {
+  let cardError = `<div class="card col-md-3 m-3 ">
+  <img src="./assets/img/404.gif" alt="error image">
+      <h3>Event not found</h3>   
+      <p>Please check your search parameters</p>
+  </div>`;
   let filtradoPorBusqueda = filtrar();
-  renderCards(filtradoPorBusqueda, div);
+  if (filtradoPorBusqueda.length < 1) {
+    div.innerHTML = cardError;
+  } else {
+    return renderCards(filtradoPorBusqueda, div);
+  }
 });
 
 function filtrarPorBusqueda(eventos, valueSearch) {
@@ -88,6 +97,7 @@ function filtrar() {
   let filtradoPorBusqueda = filtrarPorBusqueda(
     filtradoPorCategoria,
     input.value
-  );
+  ); 
   return filtradoPorBusqueda;
 }
+
