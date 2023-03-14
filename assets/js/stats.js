@@ -103,7 +103,7 @@ async function getDataFromApi() {
  
    assistAndCapacityPast.forEach(category => {
      let totalAssit = 0
-     category.assistance.forEach(assistance => totalAssit += Number(assistance)) //suma de assistencia
+     category.assistance.forEach(assistance => totalAssit += Number(assistance)) //suma de asistencia
      category.assistance = totalAssit
  
      let totalCapacity = 0
@@ -122,12 +122,15 @@ async function getDataFromApi() {
    /**
     * *IMPRIMIR TABLAS
     */
+
+   /*: ${MAX.porAssistance}%   : ${MIN.porAssistance}% : ${capacity.capacity}*/
+   
    function PrintTableOne() {
      let contenedorUno = ` <tr>     
-     <td>${MAX.eventos}: ${MAX.porAssistance}%</td>
-                          <td>${MIN.eventos}: ${MIN.porAssistance}%</td>
-                          <td>${capacity.name}: ${capacity.capacity}</td>
-                          </tr>`
+      <td>${MAX.eventos}</td>
+      <td>${MIN.eventos}</td> 
+      <td>${capacity.name}</td>
+        </tr>`
      document.getElementById("tablaEventsStadistics").innerHTML = contenedorUno
    }
    PrintTableOne()
