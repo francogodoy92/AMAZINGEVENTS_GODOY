@@ -1,13 +1,28 @@
-import data from "./amazing.js";
+/* import data from "./amazing.js";
 
-let events = data.events;
+let events = data.events; */
 
-let upcomingEvents = events.filter((events) => events.date > data.currentDate);
 
-console.log(events);
-
-let div = document.getElementById("container-cards");
-div.innerHTML = ``;
+let events = [];
+let upcomingEvents = [];
+fetch("../assets/amazing.json")
+.then(response => response.json())
+.then(data => {
+  events = data.events;
+  upcomingEvents = events.filter((events) => events.date > data.currentDate);
+  console.log(events);
+  renderCards(upcomingEvents, div);
+  let categorias = Array.from(
+    new Set(events.map((elemento) => elemento.category))
+    );
+    renderCheckboxs(categorias, categoryConteiner);
+  })
+  .catch(error => console.log(error));
+  
+  console.log(upcomingEvents);
+  
+  let div = document.getElementById("container-cards");
+  div.innerHTML = ``;
 
 function renderCards(datos, contenedor) {
   contenedor.innerHTML = "";
@@ -26,7 +41,7 @@ function renderCards(datos, contenedor) {
   contenedor.innerHTML = eventosString;
 }
 
-renderCards(upcomingEvents, div);
+
 
 let categoryConteiner = document.getElementById("checkbox");
 let categoryConteinerPadre = document.getElementById("form-father");
@@ -46,7 +61,7 @@ function renderCheckboxs(category, conteiner) {
   conteiner.innerHTML += checkboxs;
 }
 
-renderCheckboxs(categorias, categoryConteiner);
+/* renderCheckboxs(categorias, categoryConteiner); */
 
 categoryConteinerPadre.addEventListener("change", (element) => {
   let filtradoPorCategoria = filtrar();

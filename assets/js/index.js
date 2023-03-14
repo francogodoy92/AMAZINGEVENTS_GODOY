@@ -1,6 +1,21 @@
-import data from "./amazing.js";
+/* import data from "./amazing.js";
 
-let events = data.events;
+let events = data.events; */
+
+let events = [];
+
+fetch("./assets/amazing.json")
+  .then(response => response.json())
+  .then(data => {
+    events = data.events;
+    console.log(events);
+    renderCards(events, div);
+    let categorias = Array.from(
+      new Set(events.map((elemento) => elemento.category))
+    );
+    renderCheckboxs(categorias, categoryConteiner);
+  })
+  .catch(error => console.log(error));
 
 console.log(events);
 
@@ -24,7 +39,7 @@ function renderCards(datos, contenedor) {
   contenedor.innerHTML = eventosString;
 }
 
-renderCards(events, div);
+/* renderCards(events, div); */
 
 let categoryConteiner = document.getElementById("checkbox");
 let categoryConteinerPadre = document.getElementById("form-father");
@@ -44,7 +59,7 @@ function renderCheckboxs(category, conteiner) {
   conteiner.innerHTML += checkboxs;
 }
 
-renderCheckboxs(categorias, categoryConteiner);
+/* renderCheckboxs(categorias, categoryConteiner); */
 
 categoryConteinerPadre.addEventListener("change", (element) => {
   let filtradoPorCategoria = filtrar();
