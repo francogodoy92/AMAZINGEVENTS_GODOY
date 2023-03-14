@@ -154,7 +154,7 @@ async function getDataFromApi() {
       e.estimateAndCapacityFuture;
       contenedorDos += `<tr>
       <td>${e.category}</td>
-      <td>$${e.estimateRevenue}</td>
+      <td>$${(e.estimateRevenue).toLocaleString()}</td>
       <td>${e.porcentajeAttendace}%</td>
     </tr>`;
     });
@@ -168,7 +168,7 @@ async function getDataFromApi() {
       e.assistAndCapacityPast;
       contenedorTres += `<tr>
       <td>${e.category}</td>
-      <td>$${e.revenue}</td>
+      <td>$${(e.revenue).toLocaleString()}</td>
       <td>${e.porcentaje}%</td>
     </tr>`;
     });
