@@ -25,5 +25,3 @@ fetch("../assets/amazing.json")
     `;
   })
   .catch((error) => console.error(error));
-
-

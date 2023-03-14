@@ -1,8 +1,3 @@
-/* import data from "./amazing.js";
-
-let events = data.events; */
-
-
 let events = [];
 let upcomingEvents = [];
 fetch("../assets/amazing.json")
@@ -60,8 +55,6 @@ function renderCheckboxs(category, conteiner) {
   });
   conteiner.innerHTML += checkboxs;
 }
-
-/* renderCheckboxs(categorias, categoryConteiner); */
 
 categoryConteinerPadre.addEventListener("change", (element) => {
   let filtradoPorCategoria = filtrar();

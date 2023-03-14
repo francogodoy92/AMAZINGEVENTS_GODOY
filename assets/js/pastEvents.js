@@ -1,14 +1,3 @@
-/* import data from "./amazing.js";
-
-let events = data.events;
-
-let oldEvents = events.filter((events) => events.date < data.currentDate);
-
-console.log(events);
-
-let div = document.getElementById("container-cards");
-div.innerHTML = ``; */
-
 let events = [];
 let oldEvents = [];
 fetch("../assets/amazing.json")

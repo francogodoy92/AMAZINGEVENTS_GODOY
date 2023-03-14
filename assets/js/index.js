@@ -1,7 +1,3 @@
-/* import data from "./amazing.js";
-
-let events = data.events; */
-
 let events = [];
 
 fetch("./assets/amazing.json")
