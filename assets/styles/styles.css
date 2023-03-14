@@ -39,6 +39,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 1rem;
 }
 
 .navbar-toggler {
@@ -92,6 +93,7 @@ header {
 footer {
   background-color: #c7dad4;
   color: #2f414f;
+  padding: 1rem;
 }
 footer > div > img {
   width: 30px;
@@ -124,7 +126,7 @@ h1 {
 .detailstext,
 .detailsprice {
   color: #2f414f;
-  text-align: center;
+  text-align: left;
 }
 
 .detailsprice {
@@ -134,7 +136,7 @@ h1 {
 }
 
 .detailstext {
-  text-align: center;
+  text-align: left;
   font-size: 1.2rem;
 }
 
